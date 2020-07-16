@@ -1,0 +1,17 @@
+version: '3.5'
+
+services:
+    nodejs:
+        container_name: nodejs
+        build: .
+        ports:
+            - "3000:3000"
+
+    mongo:
+        image: mongo
+        container_name: mongo
+
+networks:
+    default:
+        external: 
+            name: network-prac
